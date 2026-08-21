@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff4f81">
+  <title>مفاجأة صغيرة ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <main class="app">
+    <section class="screen active" id="welcome">
+      <div class="glass hero">
+        <audio id="bgMusic" preload="auto" loop><source src="music.mp3" type="audio/mpeg"></audio><button class="music-toggle" id="musicToggle" aria-label="الموسيقى">🔇</button><div class="badge">💌 رسالة سرية</div>
+        <div class="big-heart">❤</div>
+        <h1>عندي حاجة صغيرة<br><span>عايز أقولها لكِ...</span></h1>
+        <p>بس الأول لازم تتأكدي إنك مستعدة للمفاجأة 👀</p>
+        <button class="primary" id="startBtn">أنا مستعدة ❤️</button>
+        <button class="text-btn" id="noBtn">مش مهتمة 😶</button>
+      </div>
+    </section>
+
+    <section class="screen" id="question">
+      <div class="glass card">
+        <div class="step">01 / 03</div>
+        <h2>عندي سؤال مهم جدًا...</h2>
+        <p class="question">تفتكري في شخص واحد قدر يخلي يومي أحلى لمجرد إنه موجود؟</p>
+        <div class="answers">
+          <button class="primary answer" id="yesAnswer">أكيد ❤️</button>
+          <button class="secondary answer" id="maybeAnswer">مش عارفة 🤭</button>
+        </div>
+        <p class="hint" id="hint"></p>
+      </div>
+    </section>
+
+    <section class="screen" id="message">
+      <div class="glass card">
+        <div class="step">02 / 03</div>
+        <div class="envelope">💌</div>
+        <h2>طيب اسمعي دي...</h2>
+        <p id="typedText" class="typed"></p>
+        <button class="primary hidden" id="continueBtn">لسه في حاجة أخيرة... ✨</button>
+      </div>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="glass final-card">
+        <div class="step">03 / 03</div>
+        <div class="final-heart">💗</div>
+        <h2>وأهو جه وقت الحقيقة...</h2>
+        <p class="final-message">
+          من بين كل الناس، وجودك له طعم مختلف.<br>
+          يمكن مش بعرف أقول كل اللي جوايا بسهولة،
+          بس الحقيقة إنك شخص غالي عليّا جدًا...
+        </p>
+        <div class="divider">✦</div>
+        <p class="signature">من شخص محظوظ إنه عرفك ❤️</p>
+        <button class="primary" id="againBtn">أعيدي المفاجأة 🔄</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
